@@ -1,0 +1,149 @@
+body {
+  background-image: url(./images/trekken-8-game-logo.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0;
+  padding: 0rem;
+  background-color: lightblue;
+  height: 100vh;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.intro {
+  background: transparent;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  margin: 0.5rem;
+  padding: 2rem;
+  border-radius: 4rem;
+  color: white;
+  font-weight: 1600;
+  text-align: center;
+  font-size: 4rem;
+}
+@media (max-width: 480px) {
+  .intro {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .intro {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  border-radius: 0 0 1rem 1rem;
+  padding: 0%;
+  margin: 0%;
+  border: 0%;
+}
+
+.allcards {
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  background: transparent;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  display: grid;
+  max-width: 1300px;
+  padding: 2rem;
+  margin: auto;
+  grid-gap: 1rem;
+  justify-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+@media (max-width: 480px) {
+  .allcards {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+
+.card {
+  border-radius: 1rem;
+  background-color: rgb(240, 230, 230);
+  margin: 0.5rem;
+  box-shadow: 4px 8px 8px rgb(44, 44, 44);
+}
+.card__title {
+  color: black;
+  text-align: center;
+  margin: 0.5rem;
+}
+.card__description {
+  color: black;
+  margin: 0.5rem;
+}
+.card:hover {
+  background-color: #aec7c2;
+  transition: all 500ms ease-in;
+}
+
+@media (min-width: 769px) {
+  .education {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 769px) {
+  .me {
+    grid-row: span 2;
+  }
+}
+
+@media (min-width: 769px) {
+  .picture {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+}
+
+.education-desc {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+}
+@media (max-width: 480px) {
+  .education-desc {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1052px) {
+  .me {
+    order: 0;
+  }
+  .hello {
+    order: 1;
+  }
+  .contact {
+    order: 2;
+  }
+  .education {
+    order: 3;
+  }
+  .testimonials {
+    order: 4;
+  }
+  .lorem {
+    order: 5;
+  }
+  .picture {
+    order: 6;
+  }
+}/*# sourceMappingURL=main.css.map */
