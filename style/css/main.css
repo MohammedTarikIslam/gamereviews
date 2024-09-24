@@ -1,5 +1,5 @@
 body {
-  background-image: url(./images/trekken-8-game-logo.jpg);
+  background-image: url(./images/ds.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -22,8 +22,7 @@ header {
 
 .intro {
   background: transparent;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   margin: 0.5rem;
   padding: 2rem;
   border-radius: 4rem;
@@ -48,7 +47,8 @@ header {
 .img {
   display: block;
   max-width: 100%;
-  border-radius: 0 0 1rem 1rem;
+  object-fit: cover;
+  border-radius: 1rem;
   padding: 0%;
   margin: 0%;
   border: 0%;
@@ -58,8 +58,7 @@ header {
   border: 0.1rem solid black;
   border-radius: 1rem;
   background: transparent;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   display: grid;
   max-width: 1300px;
   padding: 2rem;
@@ -76,9 +75,9 @@ header {
 
 .card {
   border-radius: 1rem;
-  background-color: rgb(240, 230, 230);
+  background-color: #f0e6e6;
   margin: 0.5rem;
-  box-shadow: 4px 8px 8px rgb(44, 44, 44);
+  box-shadow: 4px 8px 8px #2c2c2c;
 }
 .card__title {
   color: black;
@@ -88,10 +87,6 @@ header {
 .card__description {
   color: black;
   margin: 0.5rem;
-}
-.card:hover {
-  background-color: #aec7c2;
-  transition: all 500ms ease-in;
 }
 
 @media (min-width: 769px) {
@@ -106,6 +101,10 @@ header {
   }
 }
 
+.picture:hover {
+  filter: grayscale(1);
+  transition: all 500ms ease-in;
+}
 @media (min-width: 769px) {
   .picture {
     grid-row: span 2;
@@ -126,24 +125,30 @@ header {
 
 @media (min-width: 481px) and (max-width: 1052px) {
   .me {
-    order: 0;
-  }
-  .hello {
     order: 1;
   }
-  .contact {
+
+  .hello {
     order: 2;
   }
-  .education {
+
+  .contact {
     order: 3;
   }
+
+  .education {
+    order: 0;
+  }
+
   .testimonials {
     order: 4;
   }
+
   .lorem {
     order: 5;
   }
+
   .picture {
     order: 6;
   }
-}/*# sourceMappingURL=main.css.map */
+}

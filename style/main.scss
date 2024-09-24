@@ -2,7 +2,7 @@
 
 body {
   //background-image: url(./images/pexels-stephan-seeber-1054201.jpg);
-  background-image: url(./images/trekken-8-game-logo.jpg);
+  background-image: url(./images/ds.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -50,7 +50,8 @@ header {
 .img {
   display: block;
   max-width: 100%;
-  border-radius: 0 0 1rem 1rem;
+  object-fit: cover;
+  border-radius: 1rem;
   padding: 0%;
   margin: 0%;
   border: 0%;
@@ -88,10 +89,10 @@ header {
     color: map-get($font-color, body);
     margin: 0.5rem;
   }
-  &:hover {
-    background-color: #aec7c2;
-    transition: all 500ms ease-in;
-  }
+  // &:hover {
+  //   background-color: #aec7c2;
+  //   transition: all 500ms ease-in;
+  // }
 }
 
 .education {
@@ -107,6 +108,11 @@ header {
 }
 
 .picture {
+  &:hover {
+    filter: grayscale(1);
+    transition: all 500ms ease-in;
+  }
+
   @media (min-width: 769px) {
     grid-row: span 2;
     grid-column: span 2;
@@ -125,17 +131,17 @@ header {
 
 @media (min-width: 481px) and (max-width: 1052px) {
   .me {
-    order: 0;
+    order: 1;
   }
 
   .hello {
-    order: 1;
-  }
-  .contact {
     order: 2;
   }
-  .education {
+  .contact {
     order: 3;
+  }
+  .education {
+    order: 0;
   }
   .testimonials {
     order: 4;
