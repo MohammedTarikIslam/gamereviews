@@ -1,8 +1,6 @@
 @use "./variables" as *;
 
 body {
-  //background-image: url(./images/pexels-stephan-seeber-1054201.jpg);
-  background-image: url(./images/ds.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -49,12 +47,17 @@ header {
 
 .img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
   border-radius: 1rem;
   padding: 0%;
   margin: 0%;
   border: 0%;
+  filter: grayscale(0.75);
+  &:hover {
+    filter: grayscale(0);
+    transition: all 500ms ease-in;
+  }
 }
 
 .allcards {
@@ -63,7 +66,8 @@ header {
   background: transparent;
   backdrop-filter: blur(3px);
   display: grid;
-  max-width: 1300px;
+  width: 80%;
+  max-width: 1300px ;
   padding: 2rem;
   margin: auto;
   grid-gap: 1rem;
@@ -79,7 +83,6 @@ header {
   border-radius: 1rem;
   background-color: map-get($background-colour, card);
   margin: 0.5rem;
-  box-shadow: 4px 8px 8px rgb(44, 44, 44);
   &__title {
     color: map-get($font-color, title);
     text-align: center;
@@ -89,67 +92,14 @@ header {
     color: map-get($font-color, body);
     margin: 0.5rem;
   }
-  // &:hover {
-  //   background-color: #aec7c2;
-  //   transition: all 500ms ease-in;
-  // }
 }
 
-.education {
-  @media (min-width: 769px) {
-    grid-column: span 2;
-  }
-}
-
-.me {
-  @media (min-width: 769px) {
-    grid-row: span 2;
-  }
-}
-
-.picture {
-  &:hover {
-    filter: grayscale(1);
-    transition: all 500ms ease-in;
-  }
-
-  @media (min-width: 769px) {
-    grid-row: span 2;
-    grid-column: span 2;
-  }
-}
-
-.education-desc {
+.column__description {
   display: grid;
   flex-wrap: wrap;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
 
   @media (max-width: 480px) {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-  }
-}
-
-@media (min-width: 481px) and (max-width: 1052px) {
-  .me {
-    order: 1;
-  }
-
-  .hello {
-    order: 2;
-  }
-  .contact {
-    order: 3;
-  }
-  .education {
-    order: 0;
-  }
-  .testimonials {
-    order: 4;
-  }
-  .lorem {
-    order: 5;
-  }
-  .picture {
-    order: 6;
   }
 }

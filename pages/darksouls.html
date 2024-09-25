@@ -4,7 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style/css/main.css" />
-    <title>Document</title>
+
+    <style>
+      body {
+        background-image: url("../images/ds.jpg");
+      }
+
+      .opening {
+        @media (min-width: 769px) {
+          grid-column: span 2;
+        }
+      }
+
+      .map {
+        @media (min-width: 769px) {
+          grid-row: span 2;
+        }
+      }
+
+      .cover {
+        @media (min-width: 720px) {
+          grid-row: span 2;
+          grid-column: span 2;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 1338px) {
+        .opening {
+          order: 0;
+        }
+        .map {
+          order: 1;
+        }
+        .combat {
+          order: 2;
+        }
+        .rating {
+          order: 3;
+        }
+        .story {
+          order: 4;
+        }
+        .lorem {
+          order: 5;
+        }
+        .cover {
+          order: 6;
+        }
+      }
+    </style>
+
+    <title>Game Review</title>
   </head>
   <body>
     <a href="../index.html">
@@ -13,10 +63,10 @@
       </header>
     </a>
     <section class="allcards">
-      <div class="card education">
+      <div class="card opening">
         <h2 class="card__title">Dark souls</h2>
 
-        <div class="education-desc">
+        <div class="column__description">
           <p class="card__description">
             this isnt the origin of the soulslike genre but it coined the term
             due to its popularity and its level of polish. it also has a very
@@ -31,7 +81,7 @@
         </div>
       </div>
 
-      <div class="card me">
+      <div class="card map">
         <h2 class="card__title">map design</h2>
         <p class="card__description">
           this isnt the origin of the soulslike genre but it coined the term due
@@ -44,7 +94,7 @@
         </p>
       </div>
 
-      <div class="card hello">
+      <div class="card combat">
         <h2 class="card__title">combat enemies and bosses</h2>
         <p class="card__description">
           Im a second year computer science student looking for an
@@ -52,8 +102,8 @@
         </p>
       </div>
 
-      <div class="card contact">
-        <h2 class="card__title">Contact details</h2>
+      <div class="card rating">
+        <h2 class="card__title">Rating</h2>
         <p class="card__description">
           Email: mohammedtarikislam@gmail.com <br />
           Number: 07464310194 <br />
@@ -61,8 +111,8 @@
         </p>
       </div>
 
-      <div class="card testimonials">
-        <h2 class="card__title">TESTIMONIAL</h2>
+      <div class="card story">
+        <h2 class="card__title">Story</h2>
         <p class="card__description"></p>
         <p>
           An example of <b>Bold Text</b> An example of <em>Emphasized Text</em>
@@ -76,12 +126,9 @@
         </p>
       </div>
 
-      <div class="card picture">
+      <div class="card cover">
         <div class="card__image">
-          <img
-            class="img"
-            src="./style/css/images/pexels-stephan-seeber-1054201.jpg"
-          />
+          <img class="img" src="../images/pexels-stephan-seeber-1054201.jpg" />
         </div>
       </div>
 
