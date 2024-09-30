@@ -1,5 +1,6 @@
 @use "./variables" as *;
 
+//Full site styling
 body {
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -12,6 +13,9 @@ body {
   height: 100vh;
 }
 
+
+//main title
+//full page section styling
 header {
   width: 100vw;
   height: 100vh;
@@ -22,6 +26,7 @@ header {
   text-align: center;
 }
 
+//text styling 
 .intro {
   background: transparent;
   backdrop-filter: blur(3px);
@@ -46,8 +51,8 @@ header {
 }
 
 
+//container for cards
 .allcards {
-  border: 0.1rem solid black;
   border-radius: 1rem;
   background: transparent;
   backdrop-filter: blur(3px);
@@ -58,30 +63,31 @@ header {
   margin: auto;
   grid-gap: 1rem;
   justify-content: start;
-  
+  //fits cards in rows
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   @media (max-width: 480px) {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }
 
+//card styling 
 .card {
   border-radius: 1rem;
   background-color: map-get($background-colour, card);
-  margin: 0.5rem;
-  padding: 1rem;
   overflow: hidden;
+  //text styling
   &__title {
     color: map-get($font-color, title);
     text-align: center;
-    margin: 0.5rem;
+    margin: 1rem;
   }
   &__description {
     color: map-get($font-color, body);
-    margin: 0.5rem;
+    margin: 1rem;
   }
 }
 
+//styling for sections with columns of text
 .column__description {
   display: grid;
   flex-wrap: wrap;
@@ -92,7 +98,7 @@ header {
   }
 }
 
-
+//stylin for image card
 .image {
   display: flex;
   justify-content: center; 

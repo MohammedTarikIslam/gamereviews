@@ -44,7 +44,6 @@ header {
 }
 
 .allcards {
-  border: 0.1rem solid black;
   border-radius: 1rem;
   background: transparent;
   backdrop-filter: blur(3px);
@@ -66,18 +65,16 @@ header {
 .card {
   border-radius: 1rem;
   background-color: #f0e6e6;
-  margin: 0.5rem;
-  padding: 1rem;
   overflow: hidden;
 }
 .card__title {
   color: black;
   text-align: center;
-  margin: 0.5rem;
+  margin: 1rem;
 }
 .card__description {
   color: black;
-  margin: 0.5rem;
+  margin: 1rem;
 }
 
 .column__description {
